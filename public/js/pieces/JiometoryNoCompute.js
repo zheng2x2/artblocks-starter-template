@@ -108,7 +108,7 @@ for (let f = 0; f < s.length; f++) {
     }
     v.push(u);
 } // s[f].cols
-console.log('v :::', v)
+console.log('v :::', v); // '0x'+co 를 c의 숫자만큼 생성
 console.log('s2 ::: ', s);
 
 var m = ["SCIFI", "TURQUOISE", "GOLD", "META"],
@@ -119,11 +119,14 @@ const E = function(e, t, i) {
     p = function(e, t, i) {
         return e * (1 - i) + t * i
     };
-var g, x = function(e) {
+var g, 
+    x = function(e) {
         return e * e
     },
     T = function() {
-        return g ^= g << 13, g ^= g >> 17, ((g ^= g << 5) < 0 ? 1 + ~g : g) % 1e3 / 1e3
+        return g ^= g << 13, 
+            g ^= g >> 17, 
+            ((g ^= g << 5) < 0 ? 1 + ~g : g) % 1e3 / 1e3 // return
     };
 const R = "None";
 
@@ -134,9 +137,31 @@ function b() {}! function(e) {
     var t = {
         projectNumber: 1024
     };
-    t.SHADER_SEED = ~~(T() * t.projectNumber), t.CURRENT_MODE = ~~(T() * v.length), t.BACKGROUND = .18 < T(), t.SQUARE = .5 < T(), t.DIAMOND = !1, t.CIRCLE = !1, 0 == t.SQUARE && (t.DIAMOND = .8 < T(), t.CIRCLE = 0 == t.DIAMOND), t.CUT = .5 < T(), t.PULSATE = .7 < T(), 1 == t.PULSATE && (t.CUT = !1), t.LUT = .87 < T(), t.OFFSET = .2 < T(), t.LUTS_TYPE = R;
+    t.SHADER_SEED = ~~(T() * t.projectNumber),
+    t.CURRENT_MODE = ~~(T() * v.length),
+    t.BACKGROUND = .18 < T(),
+    t.SQUARE = .5 < T(),
+    t.DIAMOND = !1, 
+    t.CIRCLE = !1, 
+    0 == t.SQUARE && (t.DIAMOND = .8 < T(), 
+    t.CIRCLE = 0 == t.DIAMOND), t.CUT = .5 < T(), 
+    t.PULSATE = .7 < T(), 
+    1 == t.PULSATE && (t.CUT = !1), 
+    t.LUT = .87 < T(), 
+    t.OFFSET = .2 < T(), 
+    t.LUTS_TYPE = R;
     var i = .5 < (i = T()) ? .5 < T() ? 1 : 2 : null;
-    t.TWOD = .96 < T(), t.CURVE = 1 == i, t.SUPER_CURVE = 2 == i, t.VERTICAL = .8 < T(), t.DOUBLE_DECK = .7 < T(), t.GLITCH = .7 < T(), t.SYMETRIC = .65 < T(), t.TWOD && (t.GLITCH = !1, t.SYMETRIC = !1, t.DOUBLE_DECK = !1, t.VERTICAL = !1, t.CURVE = !0, t.CUT = !0, t.OFFSET = !0, t.PULSATE = !1), t.HYPERGLITCH = !!t.GLITCH && .5 < T(), t.CYBERGLITCH = !!t.HYPERGLITCH && .5 < T(), t.DOUBLE_SYMETRIC = !1, t.SYMETRIC && (t.DOUBLE_SYMETRIC = .8 < T());
+    t.TWOD = .96 < T(), 
+    t.CURVE = 1 == i, 
+    t.SUPER_CURVE = 2 == i, 
+    t.VERTICAL = .8 < T(), 
+    t.DOUBLE_DECK = .7 < T(), 
+    t.GLITCH = .7 < T(), 
+    t.SYMETRIC = .65 < T(), 
+    t.TWOD && (t.GLITCH = !1, t.SYMETRIC = !1, t.DOUBLE_DECK = !1, t.VERTICAL = !1, t.CURVE = !0, t.CUT = !0, t.OFFSET = !0, t.PULSATE = !1), 
+    t.HYPERGLITCH = !!t.GLITCH && .5 < T(), 
+    t.CYBERGLITCH = !!t.HYPERGLITCH && .5 < T(), 
+    t.DOUBLE_SYMETRIC = !1, t.SYMETRIC && (t.DOUBLE_SYMETRIC = .8 < T());
     var r = t.DIAMOND ? 100 : 180;
     r *= .9;
     var a = 14;
@@ -145,20 +170,59 @@ function b() {}! function(e) {
         l = ~~(x(T()) * r) + 4 * a,
         c = .05,
         e = .2;
-    1 == t.DIAMOND && (c *= 2.35, e *= 2.35), t.VERTICAL && (l = Math.min(l, 40), t.DOUBLE_DECK && (l *= .75, l = Math.max(5, l))), t.DOUBLE_SYMETRIC ? (l *= .75, o *= .75) : (l *= .9, o *= .9);
+    1 == t.DIAMOND && (c *= 2.35, e *= 2.35), 
+    t.VERTICAL && (l = Math.min(l, 40), 
+    t.DOUBLE_DECK && (l *= .75, l = Math.max(5, l))), 
+    t.DOUBLE_SYMETRIC ? (l *= .75, o *= .75) : (l *= .9, o *= .9);
     i = .85;
     t.SYMETRIC && (i = .7);
-    r = E(2 * a, 2 * r, o + l), c = p(e, c, r), r = Math.max(c, .095), c = Math.max(c, .095);
-    return t.GHOST = .8 < T(), t.WIREFRAME = .7 < T(), t.GRID = {
-        x: ~~o,
-        y: ~~(x(p(i, 1, T())) * l),
-        spaceX: 0,
-        spaceY: 0,
-        sizeW: r,
-        sizeH: c,
-        width: o * r,
-        height: l * c
-    }, t.WIREFRAME && (t.GRID.x = ~~(.5 * t.GRID.x), t.GRID.y = ~~(.5 * t.GRID.y), t.GRID.sizeW *= 2.5, t.GRID.sizeH *= 2.5, t.GRID.width *= 2.5, t.GRID.height *= 2.5), t.GRID.width = ~~t.GRID.width, t.GRID.height = ~~t.GRID.height, t.TOTAL = t.GRID.x * t.GRID.y, t.BRIDGE = .5 < T(), t.GEOM_FLOOR_PATTERN = .5 < T(), t.FLOOR_TYPE = "NOISE", t.GEOM_FLOOR_PATTERN && (t.FLOOR_TYPE = h[~~(T() * h.length)]), t.SPEED = parseFloat(p(.9, 2, T() * T()).toFixed(3)), t.SPEED % 1 == 0 && (t.SPEED += .001), null != n && (t.CURRENT_MODE = n, t.LUT = !1), "Sunrise" == v[t.CURRENT_MODE].n && (t.LUT = !1), t.COLOR_MODE = s[t.CURRENT_MODE].n, t.GLITCH_TYPE = t.CYBERGLITCH ? "CyberGlitch" : t.HYPERGLITCH ? "HyperGlitch" : t.GLITCH ? "Glitch" : R, t.CURVE_TYPE = t.CURVE ? "Curve" : t.SUPER_CURVE ? "SuperCurve" : R, t.SYMETRY_TYPE = t.DOUBLE_SYMETRIC ? "Double Symetric" : t.SYMETRIC ? "Symetric" : R, t.GEOMETRY_TYPE = t.CIRCLE ? "Circle" : t.SQUARE ? "Square" : t.DIAMOND ? "Diamond" : R, 1 == t.LUT && (t.LUTS_TYPE = m[~~(T() * m.length)], t.BACKGROUND = !0), t
+    r = E(2 * a, 2 * r, o + l);
+    c = p(e, c, r);
+    r = Math.max(c, .095);
+    c = Math.max(c, .095);
+    return t.GHOST = .8 < T(), 
+        t.WIREFRAME = .7 < T(),
+        t.GRID = {
+            x: ~~o,
+            y: ~~(x(p(i, 1, T())) * l),
+            spaceX: 0,
+            spaceY: 0,
+            sizeW: r,
+            sizeH: c,
+            width: o * r,
+            height: l * c
+        },
+    t.WIREFRAME && (
+        t.GRID.x = ~~(.5 * t.GRID.x), 
+        t.GRID.y = ~~(.5 * t.GRID.y), 
+        t.GRID.sizeW *= 2.5, 
+        t.GRID.sizeH *= 2.5, 
+        t.GRID.width *= 2.5, 
+        t.GRID.height *= 2.5
+    ),
+    t.GRID.width = ~~t.GRID.width, 
+    t.GRID.height = ~~t.GRID.height, 
+    t.TOTAL = t.GRID.x * t.GRID.y, 
+    t.BRIDGE = .5 < T(), 
+    t.GEOM_FLOOR_PATTERN = .5 < T(), 
+    t.FLOOR_TYPE = "NOISE", 
+    t.GEOM_FLOOR_PATTERN && (t.FLOOR_TYPE = h[~~(T() * h.length)]), 
+    t.SPEED = parseFloat(p(.9, 2, T() * T()).toFixed(3)), 
+    t.SPEED % 1 == 0 && (t.SPEED += .001), 
+    null != n && (t.CURRENT_MODE = n, t.LUT = !1),
+    "Sunrise" == v[t.CURRENT_MODE].n && (t.LUT = !1),
+    t.COLOR_MODE = s[t.CURRENT_MODE].n, 
+    t.GLITCH_TYPE = t.CYBERGLITCH ? "CyberGlitch" 
+        : t.HYPERGLITCH ? "HyperGlitch" 
+        : t.GLITCH ? "Glitch" 
+        : R, t.CURVE_TYPE = t.CURVE ? "Curve" 
+        : t.SUPER_CURVE ? "SuperCurve" 
+        : R, t.SYMETRY_TYPE = t.DOUBLE_SYMETRIC ? "Double Symetric" 
+        : t.SYMETRIC ? "Symetric" 
+        : R, t.GEOMETRY_TYPE = t.CIRCLE ? "Circle" 
+        : t.SQUARE ? "Square" 
+        : t.DIAMOND ? "Diamond" : R, 1 == t.LUT && (t.LUTS_TYPE = m[~~(T() * m.length)], t.BACKGROUND = !0), 
+    t // return t
 }(tokenData)), b.prototype = {
     on: function(e, t, i) {
         var n = this.e || (this.e = {});
@@ -168,10 +232,13 @@ function b() {}! function(e) {
         }), this
     },
     emit: function(e) {
-        for (var t = [].slice.call(arguments, 1), i = ((this.e || (this.e = {}))[e] || []).slice(), n = 0, r = i.length; n < r; n++) i[n].fn.apply(i[n].ctx, t);
+        for (var t = [].slice.call(arguments, 1), i = ((this.e || (this.e = {}))[e] || []).slice(), n = 0, r = i.length;    n < r; n++) 
+            i[n].fn.apply(i[n].ctx, t);
         return this
     }
 };
+
+
 var y = new b,
     S = new class {
         constructor() {
@@ -211,13 +278,16 @@ var y = new b,
             })
         }
     };
+
+//   
 let C = new THREE.WebGLRenderer({
-    canvas: i,
+    canvas: i, // document.createElement("canvas")
     powerPreference: "high-performance",
-    preserveDrawingBuffer: r,
+    preserveDrawingBuffer: r, // /HeadlessChrome/.test(window.navigator.userAgent)
     premultipliedAlpha: !r
 });
-C.setClearColor(0), C.setPixelRatio(2);
+C.setClearColor(0),
+C.setPixelRatio(2);
 var I = 2 * Math.PI;
 const _ = function(e, t) {
     this.object = e, this.de = t, this.enabled = !0, this.target = new THREE.Vector3, this.minDistance = 0, this.maxDistance = 1 / 0, this.minPolarAngle = 0, this.maxPolarAngle = Math.PI, this.minAzimuthAngle = -1 / 0, this.maxAzimuthAngle = 1 / 0, this.enableDamping = !1, this.dampingFactor = .06, this.zoomSpeed = .8, this.rotateSpeed = 1, this.enablePan = !0, this.panSpeed = 1, this.autoRotate = !1, this.autoRotateSpeed = .4, this.mouseButtons = {
@@ -487,8 +557,8 @@ var D = new w,
     O = new THREE.BufferGeometry;
 O.setIndex([2, 1, 0]), O.setAttribute("position", new THREE.Float32BufferAttribute([-1, -1, 0, -1, 4, 0, 4, -1, 0], 3));
 const M = [3, 5, 7, 9, 11];
-var H = [],
-    A = [];
+var H = [], A = [];
+
 class L {
     constructor(e) {
         this.scene = new THREE.Scene, this.scene.autoUpdate = !1;
